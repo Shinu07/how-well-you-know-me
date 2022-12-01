@@ -2,7 +2,7 @@ var readlineSync = require("readline-sync");
 
 var score = 0;
 
-// data of high score //
+// data of high score
 var highScores = [
   {
     name: "bablu",
@@ -11,11 +11,11 @@ var highScores = [
 
   {
     name: "virat",
-    score: 2,
+    score: 4,
   },
 ]
 
-// array of objects //
+// array of objects
 var questions = [{
   question: "Where do I live? ",
   answer: "odisha"
@@ -23,23 +23,31 @@ var questions = [{
   question: "My favorite superhero would be? ",
   answer: "ironman"
 },
+ {
+   question: "what is my favourite sport?",
+   answer:"football"
+ },   
 {
-  question: "Where do I work? ",
-  answer: "fresher"
+  question:"what is my hobby?",
+  answer: "photography"
+},
+{
+  question: "What i do as a profession? ",
+  answer: "webdeveloper"
 }];
 
 function welcome() {
  var userName = readlineSync.question("What's your name? ");
 
-  console.log("Welcome "+ userName + " to DO YOU KNOW Soumya?");
+  console.log("Welcome "+ userName + "  Do you know Soumya very Well?");
 }
 
 
-// play function //
+// play function
 function play(question, answer) {
   var userAnswer = readlineSync.question(question);
 
-  if (userAnswer.toUpperCase() === answer.toUpperCase()) { // branching //
+  if (userAnswer.toUpperCase() === answer.toUpperCase()) { // branching
     console.log("right!");
     score = score + 1;
     
